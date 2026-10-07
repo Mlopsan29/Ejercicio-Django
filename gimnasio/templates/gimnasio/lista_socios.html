@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista de Socios</title>
+  </head>
+  <body>
+    <h1>Lista de Socios</h1>
+    <ul>
+      {% for socio in socios %}
+      <li>
+        <strong>Nombre:</strong> {{socio.nombre}} |
+        <strong>Email:</strong> {{socio.email}} |
+        <strong>Alta:</strong> {{socio.fecha_alta}} <br />
+        <strong>Observaciones:</strong> {{ socio.observaciones_medicas }}
+      </li>
+      <hr />
+      {% empty %}
+      <li>No hay socios registrados.</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

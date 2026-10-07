@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista de Animales</title>
+  </head>
+  <body>
+    <h1>Lista de Animales</h1>
+    <ul>
+      {% for animal in animales %}
+      <li>
+        <strong>Nombre :</strong> {{ animal.nombre }} |
+        <strong>Tipo :</strong> {{ animal.tipo }} |
+        <strong>Cuidador :</strong> {{ animal.cuidador }}
+      </li>
+      {% empty %}
+      <li>No hay animales registrados.</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

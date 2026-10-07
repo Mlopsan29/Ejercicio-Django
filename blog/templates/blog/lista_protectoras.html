@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista de Protectoras</title>
+  </head>
+  <body>
+    <h1>Lista de Protectoras</h1>
+    <ul>
+      {% for protectora in protectoras %}
+      <li>
+        <strong>Nombre:</strong> {{ protectora.nombre }} <br />
+        <strong>Descripción:</strong> {{ protectora.descripcion }} <br />
+        <strong>Fecha creación:</strong> {{ protectora.fecha_creacion }}
+      </li>
+      <hr />
+      {% empty %}
+      <li>No hay protectoras registradas.</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

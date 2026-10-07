@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista de Clases</title>
+  </head>
+  <body>
+    <h1>Lista de Clases</h1>
+    <ul>
+      {% for clase in clases %}
+      <li>
+        <strong>Clase:</strong> {{clase.nombre}} |
+        <strong>Sala:</strong> {{clase.sala}} |
+        <strong>Fecha/Hora:</strong> {{clase.fecha_inicio}} |
+        <strong>Entrenador:</strong> {{ clase.entrenador.nombre }}
+      </li>
+      <hr />
+      {% empty %}
+      <li>No hay clases registradas.</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

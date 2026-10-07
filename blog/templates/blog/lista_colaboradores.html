@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista de Colaboradores</title>
+  </head>
+  <body>
+    <h1>Lista de Colaboradores</h1>
+    <ul>
+      {% for colaborador in colaboradores %}
+      <li>
+        <strong>Nombre:</strong> {{ colaborador.nombre }} |
+        <strong>Cargo:</strong> {{ colaborador.cargo }} |
+        <strong>Fecha de Entrada:</strong>
+        {{colaborador.fecha_entrada_protectora}}
+      </li>
+      {% empty %}
+      <li>No hay colaboradores registrados.</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista de Entrenadores</title>
+  </head>
+  <body>
+    <h1>Lista de Entrenadores</h1>
+    <ul>
+      {% for entrenador in entrenadores %}
+      <li>
+        <strong>Nombre:</strong> {{entrenador.nombre}} |
+        <strong>Especialidad:</strong> {{entrenador.especialidad}} <br />
+        <strong>Biografía:</strong> {{entrenador.biografia}}
+      </li>
+      <hr />
+      {% empty %}
+      <li>No hay entrenadores registrados.</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
